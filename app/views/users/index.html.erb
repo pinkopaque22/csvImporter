@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= form_with url: import_users_path, method: :post, multipart: true do |form| %>
+  <%= form.file_field :file%>
+  <%= form.button "Import" %>
+<% end %>
+<h1>
+  Users:
+  <%= @users.count %>
+</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+   <% end %>
+</div>
