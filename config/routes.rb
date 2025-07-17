@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: redirect('/users')
+  root to: redirect("/users")
   resources :users do
     collection do
     post :import
